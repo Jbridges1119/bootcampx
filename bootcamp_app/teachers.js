@@ -25,5 +25,6 @@ pool.query(queryString, values)
   res.rows.forEach(row => {
     console.log(`${row.cohort}: ${row.name}`);
   })
+  pool.end()
 })
 .catch(err => console.error('query error', err.stack));
